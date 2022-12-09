@@ -9,8 +9,6 @@ rm(list = ls())
 setwd('~/DATA-331-OD/GitHub/Final Project')
 
 moth_df1 <- read_excel('Moth_Data/untidy_moth_data.xlsx', .name_repair = 'universal')
-# ladybug_df1 <- read_excel('Ladybug_Data/untidy_ladybug_data.xlsx', .name_repair = 'universal')
-# ladybug_df2 <- read_excel('Ladybug_Data/clean_ladybug_data.xlsx', .name_repair = 'universal')
 
 # Selecting moth data
 moth_df_selected <- moth_df1 %>%
