@@ -281,3 +281,4 @@ moth_df_4_final <- moth_df_4_MALE %>%
 ggplot(moth_df_4_final, aes(x=state, y = avgSqUnits, fill = state)) +
   geom_col() +
   facet_wrap(vars(sex))
+
