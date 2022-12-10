@@ -166,8 +166,6 @@ ggplot(moth_df_2_final, aes(Month, avgSqUnits, label = state)) +
   # geom_smooth(method="lm", col="black") +
   facet_wrap(vars(sex))
 
-# geom_segment(aes(Month, avgSqUnits, xend, yend, colour = state)) +
-
 # Graph avgSqUnits by Month
 moth_df_MALE_3_L <- moth_df_selected %>%
   select(sex, Month, LWingLength, LWingWidth) %>%
