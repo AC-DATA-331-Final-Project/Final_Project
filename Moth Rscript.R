@@ -159,13 +159,12 @@ moth_df_2_final <- moth_df_2_MALE %>%
 #   geom_line() +
 #   facet_wrap(vars(sex))
 
-# ggplot(moth_df_2_final, aes(Month, avgSqUnits, color = state, group = 1)) +
-#   # geom_text_repel() +
-#   geom_point() +
-#   # geom_segment(aes(Month, avgSqUnits, xend = Month, yend = avgSqUnits, color = state)) +
-#   theme_classic(base_size = 16) +
-#   # geom_smooth(method="lm", col="black") +
-#   facet_wrap(vars(sex))
+ggplot(moth_df_2_final, aes(Month, avgSqUnits, label = state)) +
+  geom_point() +
+  geom_text_repel() +
+  theme_classic(base_size = 12) +
+  # geom_smooth(method="lm", col="black") +
+  facet_wrap(vars(sex))
 
 # geom_segment(aes(Month, avgSqUnits, xend, yend, colour = state)) +
 
