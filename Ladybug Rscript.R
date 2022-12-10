@@ -4,22 +4,15 @@ library(dplyr)
 library(lubridate)
 library(ggplot2)
 library(ggrepel)
-<<<<<<< Updated upstream
-=======
 library(stringi)
 library(stringr)
 library(treemapify)
 library(plotly)
->>>>>>> Stashed changes
 rm(list = ls())
 
 setwd('~/DATA-331-OD/GitHub/Final Project')
 
 ladybug_df1 <- read_excel('Ladybug_Data/untidy_ladybug_data.xlsx', .name_repair = 'universal')
-<<<<<<< Updated upstream
-ladybug_df2 <- read_excel('Ladybug_Data/clean_ladybug_data.xlsx', .name_repair = 'universal')
-=======
-# ladybug_df2 <- read_excel('Ladybug_Data/clean_ladybug_data.xlsx', .name_repair = 'universal')
 
 ladybug_selected <- ladybug_df1 %>%
   select(scientificName, eventDate, country, stateProvince) %>%
@@ -57,13 +50,3 @@ ggplot(ladybug_df_state, aes(area = occurences, fill = scientificName, label = n
   geom_treemap_text(fontface = "italic", colour = "white", place = "centre", grow = TRUE) +
   facet_wrap(vars(state))
 
-
-# ladybug_df_state <- ladybug_df_state %>%
-#   separate(nameXstate, c('scientificName1', 'scientificName2', 'state'))
-  
-  # na.omit(state) %>%
-  # group_by(scientificName, state) %>%
-  # summarise(avgYear = mean(date))
-  # 
-  # 
->>>>>>> Stashed changes
