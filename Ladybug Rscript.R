@@ -15,7 +15,7 @@ setwd('~/DATA-331-OD/GitHub/Final Project')
 ladybug_df1 <- read_excel('Ladybug_Data/untidy_ladybug_data.xlsx', .name_repair = 'universal')
 
 ladybug_selected <- ladybug_df1 %>%
-  select(scientificName, eventDate, country, stateProvince) %>%
+  select(scientificName, eventDate, year, month, country, stateProvince) %>%
   rename(date = eventDate,
          state = stateProvince)
 
@@ -49,7 +49,63 @@ ggplot(ladybug_df_state, aes(area = occurences, fill = scientificName, label = n
   geom_treemap() +
   geom_treemap_text(fontface = "italic", colour = "white", place = "centre", grow = TRUE) +
   facet_wrap(vars(state))
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
+# Graphing scientific name by year
+ladybug_df_year <- ladybug_selected %>%
+  dplyr::mutate(nameXyear = paste(year, scientificName)) %>%
+  dplyr::mutate(count = 1)
+
+ladybug_df_year <- ladybug_df_year %>%
+  select(nameXyear, count) %>%
+  group_by(nameXyear) %>%
+  summarise(occurences = sum(count))
+
+ladybug_df_year[c('year', 'scientificName')] <- str_split_fixed(ladybug_df_year$nameXyear, ' ', 2)
+
+ladybug_df_year <- ladybug_df_year %>%
+  select(scientificName, year, occurences) %>% 
+  filter(scientificName != "NA", year != "NA")
+
+ladybug_df_year$scientificName <- gsub("-", " ", ladybug_df_year$scientificName)
+
+ggplot(ladybug_df_year, aes(year, occurences, color = scientificName)) +
+  geom_point() 
+
+# Graphing scientific name by year
+ladybug_df_month <- ladybug_selected %>%
+  dplyr::mutate(nameXmonth = paste(month, scientificName)) %>%
+  dplyr::mutate(count = 1)
+
+ladybug_df_month <- ladybug_df_month %>%
+  select(nameXmonth, count) %>%
+  group_by(nameXmonth) %>%
+  summarise(occurences = sum(count))
+
+ladybug_df_month[c('month', 'scientificName')] <- str_split_fixed(ladybug_df_month$nameXmonth, ' ', 2)
+
+ladybug_df_month <- ladybug_df_month %>%
+  select(scientificName, month, occurences) %>% 
+  filter(scientificName != "NA", month != "NA") 
+
+ladybug_df_month$scientificName <- gsub("-", " ", ladybug_df_month$scientificName)
+ladybug_df_month$month <- as.numeric(ladybug_df_month$month)
+
+ggplot(ladybug_df_month, aes(month, occurences, color = scientificName)) +
+  geom_point()
+
+# ttest to see if bouth month 7 and 8 could considered peak ladybug season
+ladybug_df_ttest <- ladybug_df_month %>%
+  filter(month == "7" | month == "8")
+
+ggplot(ladybug_df_ttest, aes(month, occurences, group = month)) +
+  geom_boxplot()
+
+ladybug_df_ttest_7 <- ladybug_df_month %>%
+  filter(month == "7")
+
+ladybug_df_ttest_8 <- ladybug_df_month %>%
+  filter(month == "8")
+
+t.test(ladybug_df_ttest_7$occurences, ladybug_df_ttest_8$occurences, var.equal = T)
+
+
