@@ -107,5 +107,3 @@ ladybug_df_ttest_8 <- ladybug_df_month %>%
   filter(month == "8")
 
 t.test(ladybug_df_ttest_7$occurences, ladybug_df_ttest_8$occurences, var.equal = T)
-
-
