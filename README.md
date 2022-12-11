@@ -3,4 +3,4 @@
 <img src="images/Rplot.png" alt="Girl in a jacket" width="1400" height="700">
 <img src="images/Rplot06.png" alt="Girl in a jacket" width="1400" height="700">
 <img src="images/Rplot07.png" alt="Girl in a jacket" width="1200" height="700">
-<img src="images/ttest_ladybug.png" alt="Girl in a jacket" width="1150" height="750">
+<img src="images/ttest_ladybug.png" alt="Girl in a jacket" width="1200" height="500">
