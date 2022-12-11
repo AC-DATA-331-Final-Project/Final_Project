@@ -277,6 +277,7 @@ moth_df_4_final <- moth_df_4_MALE %>%
 
 ggplot(moth_df_4_final, aes(x=state, y = avgSqUnits, fill = state)) +
   geom_col() +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5)) +
   facet_wrap(vars(sex))
 
 # Creating a ttest
