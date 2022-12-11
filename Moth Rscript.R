@@ -279,3 +279,15 @@ ggplot(moth_df_4_final, aes(x=state, y = avgSqUnits, fill = state)) +
   geom_col() +
   facet_wrap(vars(sex))
 
+# Creating a ttest
+moth_df_ttest <- moth_df_2_final %>%
+  select(sex, avgSqUnits) 
+
+ggplot(moth_df_ttest, aes(sex, avgSqUnits)) +
+  geom_boxplot()
+  
+t.test(moth_df_2_MALE$avgSqUnits, moth_df_2_FEMALE$avgSqUnits,var.equal = T)
+
+
+  
+
