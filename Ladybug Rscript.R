@@ -49,4 +49,7 @@ ggplot(ladybug_df_state, aes(area = occurences, fill = scientificName, label = n
   geom_treemap() +
   geom_treemap_text(fontface = "italic", colour = "white", place = "centre", grow = TRUE) +
   facet_wrap(vars(state))
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
