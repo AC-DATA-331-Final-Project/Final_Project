@@ -10,6 +10,8 @@
 * There was to many points in the scatterplot for wing length and wing width by state. 
 * States names were scattered within our graph. This made it hard to know which state was with which point.
 <img src="images/Rplot02.png" alt="Girl in a jacket" width="1200" height="800">
+
+
 ## Graph 2
 * We wanted to show a graph that would show the relationship between wing length and wing width by state.
 * The goal was to display the states with the largest moth wing sizes.
@@ -18,18 +20,26 @@
 ### Failures
 * One failure or drawback that we had with this graph was scaling it so that it doesn't become too cluttered
 <img src="images/Rplot10.png" alt="Girl in a jacket" width="1200" height="750">
+
+
 ## Graph 3
 * We wanted to show the similarities between the male and female regression lines without the outlier point in the Female graph - Alberta.
 <img src="images/Rplot11.png" alt="Girl in a jacket" width="1200" height="750">
+
+
 ## Graph 4
 * We wanted to show the states with the largest moths in square units in more clear fashion
 <img src="images/Rplot09.png" alt="Girl in a jacket" width="1200" height="800">
+
+
 ## Graph 5
 * We wanted to display moth wing size in square units over the months of the year in a line graph.
 * The goal or purpose of this graph was to see if the size of moths increase over the year.
 ### Failures
 * We were unable to determine the conclusiveness of this hypothesis because the data was not consistently from the same place during each month, so, the data may have been more biased in one direction or the other during certain months. 
 <img src="images/Rplot.png" alt="Girl in a jacket" width="1600" height="800">
+
+
 ## Graph 6 and ttest
 * Goal was to determine if male or females were larger, however it was difficult to tell by the graph, so we created a ttest to determine if the two datasets - male and female - were statistically similar.
 <img src="images/Rplot04.png" alt="Girl in a jacket" width="1200" height="800">
