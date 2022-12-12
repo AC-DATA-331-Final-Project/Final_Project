@@ -1,9 +1,8 @@
 # Final_Project
 ## Graph 1
 * Attempting to show average size for each state by month. Wanted to show growth of moths throughout the year in each state. 
-* However we were extremely limited by the following failures.
-* The graph we created is shown below, but, we are simply displaying this graph to show what our failure looked like. 
-* We also wanted to create this graph in a line graph, but we discuss the limitation in our failure section below.
+* We were extremely limited by the following failures and our limited coding experience. 
+* We also wanted to create this graph in a line graph, but we discuss the limitations in our failure section below.
 ### Failures
 * Cleaning the sex column - dealing with NA and different names in the column.
 * Cleaning and creating the dates column.
