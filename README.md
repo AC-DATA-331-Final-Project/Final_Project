@@ -9,7 +9,6 @@ moth_df_selected <- moth_df1 %>%
 
 moth_df_selected$SexUpdated <- toupper(moth_df_selected$SexUpdated)
 
-# Cleaning moth data
 moth_df_selected <- moth_df_selected %>%
   dplyr::rename(genus = dwc.genus, 
                 specificEpithet = dwc.specificEpithet,
@@ -19,7 +18,6 @@ moth_df_selected <- moth_df_selected %>%
                 country = dwc.country,
                 state = dwc.stateProvince,
                 sex = SexUpdated) %>%
-  # dplyr::mutate(sex = recode(sex, M = "male", F = "female")) %>%  
   dplyr::mutate(sex = ifelse(sex == "M" |
                                sex == "MALE", "Male", "Female")) %>%
   dplyr::mutate(country = ifelse(country == "USA" |
