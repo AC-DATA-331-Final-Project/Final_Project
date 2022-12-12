@@ -15,9 +15,9 @@
 ## Graph 3
 * We wanted to show the number of observations by month for each species.
 * The goal was to determine if the amount of ladybugs increase during certain times of the year. 
-* It was pretty easy to tell that months 7 and 8 were peak ladybug season
+* It was pretty easy to tell that months 7 and 8 were peak ladybug season.
 ### Failures
-* When month was a character it wouldn't format properly. We had to change month to a number and the x axis is scaled to month 5, 7.5, and 10
+* When month was a character it wouldn't format properly. We had to change month to a number and the x axis is scaled to month 5, 7.5, and 10.
 * Graph would have been clearer if it was just a stacked bar chart.
 <img src="images/Rplot06.png" alt="Girl in a jacket" width="1400" height="700">
 
