@@ -1,4 +1,5 @@
 # Final_Project
+### Failures
 * Cleaning the sex column - dealing with NA and different names in the column
 * Cleaning and creating the dates column
 * Couldn’t figure out how to create line graphs for each state - partially because not every state had data for each month
