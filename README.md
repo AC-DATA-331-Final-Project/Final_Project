@@ -1,5 +1,5 @@
 # Final_Project
-* finding a way to count state name and scientific name at the same time 
+* Finding a way to count state name and scientific name at the same time 
 * How to space the data 
 <img src="images/Rplot03.png" alt="Girl in a jacket" width="1400" height="700">
 <img src="images/Rplot.png" alt="Girl in a jacket" width="1400" height="700">
