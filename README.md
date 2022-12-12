@@ -1,6 +1,8 @@
 # Final_Project
 ## Selecting and cleaning the data
-
+* We needed to select the data we needed from the given dataset
+* Then, we needed to clean the data so that sex, country, and date were consistent to their respective column formats
+* Then we changed all the characters that were measuremnents in units to numbers
 ### Code
 ```
 moth_df_selected <- moth_df1 %>%
