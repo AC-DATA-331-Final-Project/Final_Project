@@ -130,6 +130,7 @@ ggplot(moth_df_2_final, aes(Month, avgSqUnits, label = state)) +
 ### Graph 2 cont.
 * We wanted to show the similarities between the male and female regression lines without the outlier point in the Female graph - Alberta.
 <img src="images/Rplot11.png" alt="Girl in a jacket" width="1200" height="750">
+
 ### Code
 ```
 moth_df_1_MALE_Length <- moth_df_selected %>%
