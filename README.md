@@ -43,5 +43,6 @@
 ## Graph 6 and ttest
 * Goal was to determine if male or females were larger, however it was difficult to tell by the graph, so we created a ttest to determine if the two datasets - male and female - were statistically similar.
 <img src="images/Rplot04.png" alt="Girl in a jacket" width="1200" height="800">
+
 * We concluded that the datasets were not statistically similar and that the males were larger on average than the females.
 <img src="images/ttest_image.png" alt="Girl in a jacket" width="1200" height="500">
