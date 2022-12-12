@@ -126,6 +126,10 @@ ggplot(moth_df_2_final, aes(Month, avgSqUnits, label = state)) +
 * A secondary goal of this graph was to see if there were clear regions that had larger moths than others. However, the graph was inconclusive in that regard as it was to hard to decipher which region was ideal for moth size. 
 ### Failures
 * One failure or drawback that we had with this graph was scaling it so that it doesn't become too cluttered
+
+### Graph 2 cont.
+* We wanted to show the similarities between the male and female regression lines without the outlier point in the Female graph - Alberta.
+<img src="images/Rplot11.png" alt="Girl in a jacket" width="1200" height="750">
 ### Code
 ```
 moth_df_1_MALE_Length <- moth_df_selected %>%
@@ -173,10 +177,6 @@ ggplot(moth_df_1_final, aes(avgWingWidth, avgWingLength, label = state)) +
   geom_smooth(method="lm", col="black") +
   facet_wrap(vars(sex))
 ```
-
-### Graph 2 cont.
-* We wanted to show the similarities between the male and female regression lines without the outlier point in the Female graph - Alberta.
-<img src="images/Rplot11.png" alt="Girl in a jacket" width="1200" height="750">
 
 
 
