@@ -41,7 +41,12 @@ moth_df_selected$Year <- format(moth_df_selected$Dates, format = "%Y")
 moth_df_selected$Month <- format(moth_df_selected$Dates, format = "%m")
 ```
 
+
+
+
 ## Graph 1
+<img src="images/Rplot02.png" alt="Girl in a jacket" width="1200" height="800">
+
 * Attempting to show average size for each state by month. Wanted to show growth of moths throughout the year in each state. 
 * We were extremely limited by the following failures and our limited coding experience. 
 * We also wanted to create this graph in a line graph, but we discuss the limitations in our failure section below.
@@ -109,10 +114,12 @@ ggplot(moth_df_2_final, aes(Month, avgSqUnits, label = state)) +
   facet_wrap(vars(sex))
 ```
 
-<img src="images/Rplot02.png" alt="Girl in a jacket" width="1200" height="800">
+
 
 
 ## Graph 2
+<img src="images/Rplot10.png" alt="Girl in a jacket" width="1200" height="750">
+
 * We wanted to show a graph that would show the relationship between wing length and wing width by state.
 * The goal was to display the states with the largest moth wing sizes.
 * We were able to overlay a linear regression to display the relationship in the scatterplot.
@@ -167,15 +174,16 @@ ggplot(moth_df_1_final, aes(avgWingWidth, avgWingLength, label = state)) +
   facet_wrap(vars(sex))
 ```
 
-<img src="images/Rplot10.png" alt="Girl in a jacket" width="1200" height="750">
-
-
 ### Graph 2 cont.
 * We wanted to show the similarities between the male and female regression lines without the outlier point in the Female graph - Alberta.
 <img src="images/Rplot11.png" alt="Girl in a jacket" width="1200" height="750">
 
 
+
+
 ## Graph 3
+<img src="images/Rplot09.png" alt="Girl in a jacket" width="1200" height="800">
+
 * We wanted to show the states with the largest moths in square units in more clear fashion
 * We grouped the data to month 6 so that the time of year recorded was consistent
 ### Code
@@ -241,11 +249,13 @@ ggplot(moth_df_4_final, aes(x=state, y = avgSqUnits, fill = state)) +
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5)) +
   facet_wrap(vars(sex))
 ```
-  
-<img src="images/Rplot09.png" alt="Girl in a jacket" width="1200" height="800">
+
+
 
 
 ## Graph 4
+<img src="images/Rplot.png" alt="Girl in a jacket" width="1600" height="800">
+
 * We wanted to display moth wing size in square units over the months of the year in a line graph.
 * The goal or purpose of this graph was to see if the size of moths increase over the year.
 ### Failures
@@ -304,10 +314,12 @@ ggplot(moth_df_3_final, aes(x=Month, y=avgSqUnits, group = 1, color = sex)) +
   facet_wrap(vars(sex))
 ```
 
-<img src="images/Rplot.png" alt="Girl in a jacket" width="1600" height="800">
+
 
 
 ## Graph 5 and ttest
+<img src="images/Rplot04.png" alt="Girl in a jacket" width="1200" height="800">
+
 * Goal was to determine if male or females were larger, however it was difficult to tell by the graph, so we created a ttest to determine if the two datasets - male and female - were statistically similar.
 ### Code
 ```
@@ -318,12 +330,10 @@ ggplot(moth_df_ttest, aes(sex, avgSqUnits)) +
   geom_boxplot()
 ```
 
-<img src="images/Rplot04.png" alt="Girl in a jacket" width="1200" height="800">
+<img src="images/ttest_image.png" alt="Girl in a jacket" width="1200" height="500">
 
 * We concluded that the datasets were not statistically similar and that the males were larger on average than the females.
 ### Code
 ```
 t.test(moth_df_2_MALE$avgSqUnits, moth_df_2_FEMALE$avgSqUnits,var.equal = T)
 ```
-
-<img src="images/ttest_image.png" alt="Girl in a jacket" width="1200" height="500">
